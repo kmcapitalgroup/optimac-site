@@ -23,7 +23,6 @@
     search(el, w) {
       const rows = [
         ['Xcode', T('Données dérivées Xcode', 'Xcode derived data'), 6.2, 'dev'],
-        ['npm', T('Cache npm', 'npm cache'), 1.9, 'dev'],
         ['Steam', T('Cache de shaders Steam', 'Steam shader cache'), 4.6, 'game'],
         ['Xcode', T('Caches du simulateur Xcode', 'Xcode simulator caches'), 4.1, 'dev'],
         ['Adobe', T('Cache média Adobe', 'Adobe media cache'), 9.4, 'video'],
@@ -169,6 +168,100 @@
         el.querySelector('.nf-share').classList.add('press');
         await w(350);
         el.querySelector('.nf-sheet').classList.add('in');
+        await w(2400);
+      };
+    },
+
+    // Revue des téléchargements : signalés, jamais déplacés.
+    downloads(el, w) {
+      const rows = [
+        ['Figma-125.4.dmg', T('Application déjà installée', 'App already installed'), 0.38],
+        ['rapport (1).pdf', T('Copie d’un autre téléchargement', 'Copy of another download'), 0.004],
+        ['assets-2024.zip', T('Archive déjà décompressée', 'Archive already extracted'), 1.2],
+      ];
+      el.innerHTML = `
+        <div class="nf-head"><span class="nf-glyph nf-dl">↓</span>${T('Téléchargements', 'Downloads')}<span class="nf-total nf-dlt">0</span></div>
+        <div class="nf-rows">${rows.map((r) => `<div class="nf-row nf-dlrow"><b>${esc(r[0])}<small>${esc(r[1])}</small></b><span>${size(r[2])}</span><i class="nf-finder">${T('Afficher', 'Reveal')}</i></div>`).join('')}</div>
+        <div class="nf-foot">${T('Signalés seulement : Optiwise ne les déplace jamais', 'Flagged only: Optiwise never moves them')}</div>`;
+      return async () => {
+        const total = el.querySelector('.nf-dlt');
+        let sum = 0;
+        await w(700);
+        const rs = [...el.querySelectorAll('.nf-row')];
+        for (let k = 0; k < rs.length; k++) { rs[k].classList.add('in'); sum += rows[k][2]; total.textContent = size(sum); await w(450); }
+        await w(400);
+        rs[2].querySelector('.nf-finder').classList.add('press');
+        await w(2400);
+      };
+    },
+
+    // Doublons exacts et dossiers vides.
+    dupes(el, w) {
+      el.innerHTML = `
+        <div class="nf-pair">
+          <div class="nf-file"><span class="nf-doc"></span><b>IMG_4021.HEIC</b><small>${T('Bureau', 'Desktop')}</small></div>
+          <div class="nf-cmp"><span class="nf-bits"></span><b class="nf-eq">=</b></div>
+          <div class="nf-file"><span class="nf-doc"></span><b>IMG_4021 copie.HEIC</b><small>${T('Téléchargements', 'Downloads')}</small></div>
+        </div>
+        <div class="nf-verdict">${T('Identiques, octet par octet', 'Identical, byte for byte')}</div>
+        <div class="nf-sum"><span>${T('Doublons', 'Duplicates')} · <b class="nf-dn">0</b></span><span>${T('Dossiers vides', 'Empty folders')} · <b class="nf-en">0</b></span></div>
+        <div class="nf-foot">${T('Rien n’est déplacé sans votre accord', 'Nothing moves without your say-so')}</div>`;
+      return async () => {
+        await w(600);
+        el.querySelectorAll('.nf-file').forEach((f) => f.classList.add('in'));
+        await w(500);
+        el.querySelector('.nf-cmp').classList.add('run');
+        await w(1300);
+        el.querySelector('.nf-cmp').classList.add('ok');
+        el.querySelector('.nf-verdict').classList.add('in');
+        await w(300);
+        await count(el.querySelector('.nf-dn'), 37, 700, (v) => String(Math.round(v)), w);
+        await count(el.querySelector('.nf-en'), 12, 400, (v) => String(Math.round(v)), w);
+        await w(2200);
+      };
+    },
+
+    // Applications ouvertes qui utilisent la sélection.
+    running(el, w) {
+      el.innerHTML = `
+        <div class="nf-alert">
+          <b>${T('2 applications ouvertes utilisent cette sélection', '2 open apps are using this selection')}</b>
+          <small>${T('Quittez-les pour un nettoyage complet.', 'Quit them for a complete clean-up.')}</small>
+          <div class="nf-running"><span class="nf-ra" style="--c:#7C8CFF"><i>D</i>Discord</span><span class="nf-ra" style="--c:#4FA8FF"><i>V</i>VS Code</span></div>
+          <div class="nf-actions"><span class="nf-btn">${T('Continuer', 'Continue')}</span><span class="nf-btn nf-share nf-quit">${T('Quitter ces applications', 'Quit these apps')}</span></div>
+        </div>
+        <div class="nf-ready">${T('Prêt : rien ne bloque le nettoyage', 'Ready: nothing blocks the clean-up')}</div>`;
+      return async () => {
+        await w(500);
+        el.querySelector('.nf-alert').classList.add('in');
+        await w(1500);
+        el.querySelector('.nf-quit').classList.add('press');
+        await w(300);
+        for (const a of el.querySelectorAll('.nf-ra')) { a.classList.add('quit'); await w(350); }
+        await w(300);
+        el.querySelector('.nf-ready').classList.add('in');
+        await w(2400);
+      };
+    },
+
+    // Espace récupéré ce mois-ci, mesuré.
+    month(el, w) {
+      const weeks = [1.8, 4.2, 0.9, 5.5];
+      const max = 5.5;
+      el.innerHTML = `
+        <small>${T('Récupéré ce mois-ci', 'Recovered this month')}</small>
+        <strong class="nf-big nf-mb">0</strong>
+        <small class="nf-meas">${T('Mesuré sur le disque après chaque nettoyage', 'Measured on disk after each clean-up')}</small>
+        <div class="nf-bars">${weeks.map((v, i) => `<div><i style="--h:${(v / max) * 100}%"></i><small>${T('S', 'W')}${i + 1}</small></div>`).join('')}</div>`;
+      return async () => {
+        await w(500);
+        const bars = [...el.querySelectorAll('.nf-bars div')];
+        let sum = 0;
+        for (let k = 0; k < bars.length; k++) {
+          bars[k].classList.add('in');
+          const from = sum; sum += weeks[k];
+          await count(el.querySelector('.nf-mb'), weeks[k], 450, (v) => gb(from + v), w);
+        }
         await w(2400);
       };
     },
