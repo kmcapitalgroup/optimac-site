@@ -53,8 +53,9 @@
 
       <div class="hero-shot" id="hero-shot">
         <div class="window">
-          <img src="assets/captures/01-vue-d-ensemble.webp" width="1600" height="1000"
-               alt="Vue d’ensemble d’Optiwise : score de santé de 69 sur 100, stockage, mémoire, processeur, démarrage et recommandations prioritaires">
+          <div class="live-demo" id="live-demo" role="img" aria-label="Démo animée d’Optiwise : analyse du Mac, éléments récupérables sans risque, prévisualisation puis mise à la Corbeille">
+            <noscript><img src="assets/captures/fr/01-vue-d-ensemble.webp" width="1600" height="1000" alt="Vue d’ensemble d’Optiwise"></noscript>
+          </div>
         </div>
       </div>
 
@@ -148,7 +149,7 @@
             <li>Synthèse en langage clair de l’état du Mac</li>
           </ul>
         </div>
-        <div class="window reveal"><img src="assets/captures/02-analyse.webp" width="1600" height="1000" loading="lazy" alt="Écran d’analyse terminée avec l’espace récupérable et la liste des éléments nettoyables"></div>
+        <div class="window reveal"><img src="assets/captures/fr/02-analyse.webp" width="1600" height="1000" loading="lazy" alt="Écran d’analyse terminée avec l’espace récupérable et la liste des éléments nettoyables"></div>
       </div>
 
       <div class="feature reverse">
@@ -162,7 +163,7 @@
             <li>Fichiers .env, clés, certificats et bases de données jamais proposés</li>
           </ul>
         </div>
-        <div class="window reveal"><img src="assets/captures/03-nettoyage.webp" width="1600" height="1000" loading="lazy" alt="Prévisualisation du nettoyage listant les caches Homebrew, npm et pip et ce qui sera conservé"></div>
+        <div class="window reveal"><img src="assets/captures/fr/03-nettoyage.webp" width="1600" height="1000" loading="lazy" alt="Prévisualisation du nettoyage listant les caches Homebrew, npm et pip et ce qui sera conservé"></div>
       </div>
 
       <div class="feature">
@@ -176,31 +177,20 @@
             <li>Évolution de l’espace libre à chaque analyse</li>
           </ul>
         </div>
-        <div class="window reveal"><img src="assets/captures/04-stockage.webp" width="1600" height="1000" loading="lazy" alt="Répartition du stockage par catégorie"></div>
+        <div class="window reveal"><img src="assets/captures/fr/04-stockage.webp" width="1600" height="1000" loading="lazy" alt="Répartition du stockage par catégorie"></div>
       </div>
     </div>
   </section>
 
   <!-- Profils -->
-  <section class="alt">
+  <section class="alt" id="profils">
     <div class="wrap">
       <div class="section-head center reveal">
         <span class="eyebrow">Profils métiers</span>
         <h2>Il connaît vos outils.</h2>
-        <p class="lead">Un cache de rendu vidéo, des données dérivées Xcode ou un modèle d’IA téléchargé ne se traitent pas pareil. Activez les profils qui vous ressemblent, combinez-les.</p>
+        <p class="lead">Un cache de rendu vidéo, des index JetBrains ou un modèle d’IA téléchargé ne se traitent pas pareil. Choisissez un métier et regardez Optiwise l’analyser.</p>
       </div>
-      <div class="chips reveal">
-        <span class="chip">Général / Professionnel <small class="free">Free</small></span>
-        <span class="chip">Développeur <small class="free">Free</small></span>
-        <span class="chip">Étudiant <small class="free">Free</small></span>
-        <span class="chip">Montage vidéo <small class="pro">Pro</small></span>
-        <span class="chip">Photographie <small class="pro">Pro</small></span>
-        <span class="chip">Design graphique <small class="pro">Pro</small></span>
-        <span class="chip">3D <small class="pro">Pro</small></span>
-        <span class="chip">Audio / Musique <small class="pro">Pro</small></span>
-        <span class="chip">IA locale <small class="pro">Pro</small></span>
-        <span class="chip">Profil personnalisé <small class="pro">Pro</small></span>
-      </div>
+      <div class="profile-demo reveal" id="profile-demo"></div>
     </div>
   </section>
 
@@ -213,17 +203,17 @@
         <p class="lead">Écrit en Swift et SwiftUI, Optiwise s’intègre à macOS comme une app d’Apple.</p>
       </div>
       <div class="gallery-tabs" role="tablist" aria-label="Écrans de l’application">
-        <button role="tab" aria-selected="true" data-src="assets/captures/01-vue-d-ensemble.webp" data-caption="Vue d’ensemble : score de santé, ressources et recommandations prioritaires.">Vue d’ensemble</button>
-        <button role="tab" aria-selected="false" data-src="assets/captures/02-analyse.webp" data-caption="Analyse : ce qui peut être libéré, classé par niveau de risque.">Analyse</button>
-        <button role="tab" aria-selected="false" data-src="assets/captures/03-nettoyage.webp" data-caption="Nettoyage : prévisualisation complète avant tout déplacement vers la Corbeille.">Nettoyage</button>
-        <button role="tab" aria-selected="false" data-src="assets/captures/04-stockage.webp" data-caption="Stockage : la répartition du disque par catégorie.">Stockage</button>
-        <button role="tab" aria-selected="false" data-src="assets/captures/05-profils.webp" data-caption="Profils métiers : chaque métier a ses caches et ses protections.">Profils</button>
-        <button role="tab" aria-selected="false" data-src="assets/captures/06-historique.webp" data-caption="Historique : chaque nettoyage passé, avec l’espace récupéré.">Historique</button>
-        <button role="tab" aria-selected="false" data-src="assets/captures/07-pro.webp" data-caption="Optiwise Pro : tous les profils, règles personnalisées et automatisations.">Pro</button>
+        <button role="tab" aria-selected="true" data-src="assets/captures/fr/01-vue-d-ensemble.webp" data-caption="Vue d’ensemble : score de santé, ressources et recommandations prioritaires.">Vue d’ensemble</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/fr/02-analyse.webp" data-caption="Analyse : ce qui peut être libéré, classé par niveau de risque.">Analyse</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/fr/03-nettoyage.webp" data-caption="Nettoyage : prévisualisation complète avant tout déplacement vers la Corbeille.">Nettoyage</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/fr/04-stockage.webp" data-caption="Stockage : la répartition du disque par catégorie.">Stockage</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/fr/05-profils.webp" data-caption="Profils métiers : chaque métier a ses caches et ses protections.">Profils</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/fr/06-historique.webp" data-caption="Historique : chaque nettoyage passé, avec l’espace récupéré.">Historique</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/fr/07-pro.webp" data-caption="Optiwise Pro : tous les profils, règles personnalisées et automatisations.">Pro</button>
       </div>
       <div class="gallery-stage reveal">
         <figure>
-          <div class="window"><img id="gallery-img" src="assets/captures/01-vue-d-ensemble.webp" width="1600" height="1000" loading="lazy" alt="Capture d’écran d’Optiwise"></div>
+          <div class="window"><img id="gallery-img" src="assets/captures/fr/01-vue-d-ensemble.webp" width="1600" height="1000" loading="lazy" alt="Capture d’écran d’Optiwise"></div>
           <figcaption id="gallery-caption" aria-live="polite">Vue d’ensemble : score de santé, ressources et recommandations prioritaires.</figcaption>
         </figure>
       </div>
@@ -402,5 +392,7 @@
     caption.textContent = tab.dataset.caption;
   }));
 </script>
+<script src="assets/demo.js" defer></script>
+  <script src="assets/profiles.js" defer></script>
 </body>
 </html>
