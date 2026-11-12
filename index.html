@@ -1,19 +1,406 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OPTIMAC</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Optiwise — Votre Mac, plus libre. Plus rapide. Plus vous.</title>
+  <meta name="description" content="Optiwise analyse, nettoie et optimise votre Mac en toute sécurité. 100 % local, sans télémétrie, tout passe par la Corbeille. Gratuit, avec une offre Pro.">
+  <meta name="theme-color" content="#0A0F14">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icone.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Optiwise — Votre Mac, plus libre. Plus rapide. Plus vous.">
+  <meta property="og:description" content="Analyse, nettoyage et optimisation du Mac, 100 % local et sûr par défaut.">
+  <meta property="og:image" content="https://kmcapitalgroup.github.io/optimac-site/assets/partage.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>document.documentElement.classList.remove('no-js')</script>
 </head>
 <body>
-<main>
-<header><a class="brand" href="">OPTIMAC</a><nav><a href="confidentialite/">Confidentialité</a><a href="support/">Support</a><a href="en/">English</a></nav></header>
-<h1>Votre Mac, plus libre. Plus rapide. Plus vous.</h1>
-<p class="lead">OPTIMAC est l’assistant local qui vous aide à comprendre, entretenir et optimiser votre Mac, sans sacrifier vos données ni votre vie privée.</p>
-<div class="card"><p>Analyse 100 % locale · prévisualisation avant chaque action · tout passe par la Corbeille · profils métiers pour développeurs, vidéo, photo, design, 3D, audio et IA locale.</p></div>
-<p><a href="confidentialite/">Politique de confidentialité</a> · <a href="support/">Support</a></p>
-<footer>© 2026 KM Capital Group · OPTIMAC</footer>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/icone.png" alt="" width="30" height="30">Optiwise</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#benefices">Bénéfices</a>
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#securite">Sécurité</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#tarifs">Essayer gratuitement</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <img class="hero-icon" src="assets/icone.png" alt="Icône d’Optiwise" width="104" height="104">
+      <span class="eyebrow">Pour macOS Sonoma et ultérieur</span>
+      <h1>Votre Mac, plus libre.<br><span class="gradient-text">Plus rapide. Plus vous.</span></h1>
+      <p class="lead">Optiwise trouve les gigaoctets inutiles, explique ce qui ralentit votre Mac et le nettoie sans jamais prendre de risque avec vos fichiers. Tout se passe sur votre Mac.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#tarifs">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.68c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.97.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.1 5.9c.63-.77 1.06-1.83.94-2.9-.91.04-2.02.61-2.67 1.37-.58.68-1.1 1.77-.96 2.81 1.02.08 2.06-.52 2.69-1.28z"/></svg>
+          Bientôt sur le Mac App Store
+        </a>
+        <a class="btn btn-ghost" href="#fonctionnalites">Découvrir l’app</a>
+      </div>
+      <p class="hero-note">Gratuit pour l’essentiel · Sans compte · Sans télémétrie</p>
+
+      <div class="hero-shot" id="hero-shot">
+        <div class="window">
+          <img src="assets/captures/01-vue-d-ensemble.webp" width="1600" height="1000"
+               alt="Vue d’ensemble d’Optiwise : score de santé de 69 sur 100, stockage, mémoire, processeur, démarrage et recommandations prioritaires">
+        </div>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><strong>100 %</strong><span>analyse locale</span></div>
+        <div class="stat"><strong>0</strong><span>suppression définitive</span></div>
+        <div class="stat"><strong>10</strong><span>profils métiers</span></div>
+        <div class="stat"><strong>0</strong><span>télémétrie, 0 compte</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bénéfices -->
+  <section id="benefices">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Pourquoi Optiwise</span>
+        <h2>Un Mac entretenu,<br>sans y passer vos soirées.</h2>
+        <p class="lead">Les nettoyeurs classiques suppriment à l’aveugle. Optiwise vous montre, vous explique, puis agit seulement avec votre accord.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
+          <h3>Des gigaoctets récupérés</h3>
+          <p>Caches de Homebrew, npm, pip, Xcode, Docker, fichiers temporaires, gros fichiers oubliés : Optiwise chiffre ce que vous pouvez libérer, catégorie par catégorie.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon glacier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3>Un score de santé clair</h3>
+          <p>Stockage, mémoire, processeur, état thermique et éléments lancés au démarrage réunis en un score sur 100, avec ce qu’il faut faire en priorité.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Sûr par défaut</h3>
+          <p>Prévisualisation obligatoire, puis la Corbeille. Vos documents, photos, secrets, bases de données et fichiers suivis par Git sont protégés d’office.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon warning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Vos données restent chez vous</h3>
+          <p>Aucun nom de fichier, aucun chemin, aucun contenu n’est envoyé à un serveur. Pas de compte, pas de télémétrie, pas de publicité.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+          <h3>Pensé pour votre métier</h3>
+          <p>Développeur, vidéaste, photographe, designer, musicien… chaque profil sait ce qui se régénère et ce qui ne doit jamais être touché.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon glacier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-5 3.6L16.5 20 12 16.5 7.5 20 9 13.6 4 10l6.1-1.2z"/></svg></div>
+          <h3>Des explications, pas du jargon</h3>
+          <p>Chaque élément dit ce qu’il est, pourquoi il peut partir et s’il sera retéléchargé. Sur les Mac compatibles, l’IA d’Apple répond à vos questions, sur l’appareil.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment ça marche -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Comment ça marche</span>
+        <h2>Trois étapes. Aucune surprise.</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <h3>Analysez</h3>
+          <p>Un clic sur « Analyser mon Mac ». Optiwise mesure le stockage, les caches, les projets et le démarrage, localement, en quelques secondes.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Comprenez</h3>
+          <p>Les résultats sont classés par niveau de risque, avec une explication pour chacun. Vous choisissez ce qui part, et rien d’autre.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Nettoyez sereinement</h3>
+          <p>Une prévisualisation récapitule tout, puis les éléments vont dans la Corbeille. Un doute ? Vous les remettez en place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fonctionnalités détaillées -->
+  <section id="fonctionnalites">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="eyebrow">Analyse</span>
+          <h2>Voyez enfin où passe votre espace.</h2>
+          <p class="lead">Une analyse complète qui distingue ce qui se régénère, ce qui mérite un coup d’œil et ce qui doit rester.</p>
+          <ul class="checks">
+            <li>Récupérable estimé, au mégaoctet près</li>
+            <li>Niveau de risque affiché pour chaque élément</li>
+            <li>Synthèse en langage clair de l’état du Mac</li>
+          </ul>
+        </div>
+        <div class="window reveal"><img src="assets/captures/02-analyse.webp" width="1600" height="1000" loading="lazy" alt="Écran d’analyse terminée avec l’espace récupérable et la liste des éléments nettoyables"></div>
+      </div>
+
+      <div class="feature reverse">
+        <div class="feature-text reveal">
+          <span class="eyebrow">Nettoyage</span>
+          <h2>Rien ne part sans votre accord.</h2>
+          <p class="lead">Avant chaque nettoyage, une prévisualisation détaille les éléments, leur taille et ce qui sera conservé.</p>
+          <ul class="checks">
+            <li>Uniquement vers la Corbeille : tout reste récupérable</li>
+            <li>Revérification de chaque fichier juste avant l’action</li>
+            <li>Fichiers .env, clés, certificats et bases de données jamais proposés</li>
+          </ul>
+        </div>
+        <div class="window reveal"><img src="assets/captures/03-nettoyage.webp" width="1600" height="1000" loading="lazy" alt="Prévisualisation du nettoyage listant les caches Homebrew, npm et pip et ce qui sera conservé"></div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="eyebrow">Stockage</span>
+          <h2>La carte de votre disque.</h2>
+          <p class="lead">Applications, documents, médias, outils de développement : la répartition du stockage d’un seul coup d’œil.</p>
+          <ul class="checks">
+            <li>Gros fichiers anciens repérés automatiquement</li>
+            <li>Désinstallation d’applications avec leurs restes</li>
+            <li>Évolution de l’espace libre à chaque analyse</li>
+          </ul>
+        </div>
+        <div class="window reveal"><img src="assets/captures/04-stockage.webp" width="1600" height="1000" loading="lazy" alt="Répartition du stockage par catégorie"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profils -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Profils métiers</span>
+        <h2>Il connaît vos outils.</h2>
+        <p class="lead">Un cache de rendu vidéo, des données dérivées Xcode ou un modèle d’IA téléchargé ne se traitent pas pareil. Activez les profils qui vous ressemblent, combinez-les.</p>
+      </div>
+      <div class="chips reveal">
+        <span class="chip">Général / Professionnel <small class="free">Free</small></span>
+        <span class="chip">Développeur <small class="free">Free</small></span>
+        <span class="chip">Étudiant <small class="free">Free</small></span>
+        <span class="chip">Montage vidéo <small class="pro">Pro</small></span>
+        <span class="chip">Photographie <small class="pro">Pro</small></span>
+        <span class="chip">Design graphique <small class="pro">Pro</small></span>
+        <span class="chip">3D <small class="pro">Pro</small></span>
+        <span class="chip">Audio / Musique <small class="pro">Pro</small></span>
+        <span class="chip">IA locale <small class="pro">Pro</small></span>
+        <span class="chip">Profil personnalisé <small class="pro">Pro</small></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">En images</span>
+        <h2>Natif, rapide, élégant.</h2>
+        <p class="lead">Écrit en Swift et SwiftUI, Optiwise s’intègre à macOS comme une app d’Apple.</p>
+      </div>
+      <div class="gallery-tabs" role="tablist" aria-label="Écrans de l’application">
+        <button role="tab" aria-selected="true" data-src="assets/captures/01-vue-d-ensemble.webp" data-caption="Vue d’ensemble : score de santé, ressources et recommandations prioritaires.">Vue d’ensemble</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/02-analyse.webp" data-caption="Analyse : ce qui peut être libéré, classé par niveau de risque.">Analyse</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/03-nettoyage.webp" data-caption="Nettoyage : prévisualisation complète avant tout déplacement vers la Corbeille.">Nettoyage</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/04-stockage.webp" data-caption="Stockage : la répartition du disque par catégorie.">Stockage</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/05-profils.webp" data-caption="Profils métiers : chaque métier a ses caches et ses protections.">Profils</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/06-historique.webp" data-caption="Historique : chaque nettoyage passé, avec l’espace récupéré.">Historique</button>
+        <button role="tab" aria-selected="false" data-src="assets/captures/07-pro.webp" data-caption="Optiwise Pro : tous les profils, règles personnalisées et automatisations.">Pro</button>
+      </div>
+      <div class="gallery-stage reveal">
+        <figure>
+          <div class="window"><img id="gallery-img" src="assets/captures/01-vue-d-ensemble.webp" width="1600" height="1000" loading="lazy" alt="Capture d’écran d’Optiwise"></div>
+          <figcaption id="gallery-caption" aria-live="polite">Vue d’ensemble : score de santé, ressources et recommandations prioritaires.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sécurité et confidentialité -->
+  <section id="securite" class="alt">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Sécurité et confidentialité</span>
+        <h2>Vos fichiers ne sont pas<br>un terrain d’expérimentation.</h2>
+        <p class="lead">Ces garanties sont dans le code, pas dans une option. Elles sont gratuites, pour toujours.</p>
+      </div>
+      <div class="trust">
+        <div class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/></svg></div>
+          <div><h3>Jamais de suppression définitive</h3><p>La seule action possible est le déplacement vers la Corbeille, après votre confirmation.</p></div>
+        </div>
+        <div class="card reveal">
+          <div class="icon glacier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a6 6 0 0 0 6 6h3"/></svg></div>
+          <div><h3>Respect de vos projets Git</h3><p>Un artefact de compilation n’est proposé que s’il est ignoré et non suivi par Git. Le reste est protégé.</p></div>
+        </div>
+        <div class="card reveal">
+          <div class="icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
+          <div><h3>IA locale, bridée</h3><p>Sur les Mac compatibles, l’IA d’Apple ne voit que des catégories et des tailles, jamais de chemin. Elle ne peut rien supprimer.</p></div>
+        </div>
+        <div class="card reveal">
+          <div class="icon warning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="M3 3l18 18"/></svg></div>
+          <div><h3>Zéro collecte</h3><p>Pas de télémétrie, pas de compte, pas de traceur. Les paiements sont gérés par l’App Store. <a href="confidentialite/">Lire la politique</a></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section id="tarifs">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Tarifs</span>
+        <h2>Gratuit pour l’essentiel.<br><span class="gradient-text">Pro pour aller plus loin.</span></h2>
+        <p class="lead">L’analyse, le nettoyage sûr et la confidentialité ne sont jamais payants. Pro débloque les profils créatifs et l’automatisation.</p>
+      </div>
+      <div class="pricing">
+        <div class="plan reveal">
+          <h3>Free</h3>
+          <div class="price">0 €</div>
+          <div class="price-note">Pour toujours</div>
+          <ul>
+            <li>Analyse complète et score de santé</li>
+            <li>Stockage, mémoire et démarrage</li>
+            <li>Caches npm, pip, Homebrew…</li>
+            <li>Profils Général, Développeur et Étudiant</li>
+            <li>Prévisualisation, protections et Corbeille</li>
+            <li>Historique des nettoyages</li>
+          </ul>
+          <a class="btn btn-ghost" href="#top">Bientôt disponible</a>
+        </div>
+        <div class="plan featured reveal">
+          <span class="badge">MEILLEURE OFFRE</span>
+          <h3>Pro annuel</h3>
+          <div class="price">34,99 € <small>/ an</small></div>
+          <div class="price-note">Soit 2,92 € par mois · 41 % d’économie</div>
+          <ul>
+            <li>Tout ce qui est inclus dans Free</li>
+            <li>Profils Vidéo, Photo, Design, 3D, Audio et IA locale</li>
+            <li>Développeur avancé : Xcode, Docker, Gradle, dossiers de projets</li>
+            <li>Règles personnalisées</li>
+            <li>Automatisations à faible risque</li>
+            <li>Historique comparé et diagnostics détaillés</li>
+          </ul>
+          <a class="btn btn-primary" href="#top">Bientôt disponible</a>
+        </div>
+        <div class="plan reveal">
+          <h3>Pro mensuel</h3>
+          <div class="price">4,99 € <small>/ mois</small></div>
+          <div class="price-note">Sans engagement</div>
+          <ul>
+            <li>Tout ce qui est inclus dans Pro annuel</li>
+            <li>Facturé chaque mois</li>
+            <li>Résiliable à tout moment depuis l’App Store</li>
+            <li>Vos données restent sur votre Mac à l’expiration</li>
+          </ul>
+          <a class="btn btn-ghost" href="#top">Bientôt disponible</a>
+        </div>
+      </div>
+      <p class="pricing-foot">Prix TTC en France. Abonnement renouvelé automatiquement, géré et résiliable depuis les réglages de votre compte App Store.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2>Bonnes questions.</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal">
+          <summary>Optiwise peut-il effacer un fichier important ?</summary>
+          <p>Non. Optiwise ne supprime jamais définitivement : il déplace les éléments que vous avez choisis vers la Corbeille, après une prévisualisation. Les documents, photos, secrets, bases de données, sauvegardes, données synchronisées et fichiers suivis par Git sont protégés par défaut et ne sont jamais proposés.</p>
+        </details>
+        <details class="reveal">
+          <summary>Mes données quittent-elles mon Mac ?</summary>
+          <p>Non. Toute l’analyse est réalisée sur votre Mac. Aucun nom de fichier, chemin ou contenu n’est envoyé, et l’app n’intègre aucune télémétrie. Le détail est dans notre <a href="confidentialite/">politique de confidentialité</a>.</p>
+        </details>
+        <details class="reveal">
+          <summary>Quelle version de macOS faut-il ?</summary>
+          <p>macOS 14 Sonoma ou ultérieur, sur Mac Apple Silicon ou Intel. Les explications par IA locale demandent macOS 26 et un Mac compatible Apple Intelligence ; sans elles, Optiwise utilise des explications rédigées à l’avance.</p>
+        </details>
+        <details class="reveal">
+          <summary>Que reste-t-il si j’arrête Pro ?</summary>
+          <p>Tout ce qui est gratuit continue de fonctionner, et vos profils, règles et historique restent sur votre Mac. Seules les nouvelles analyses avancées redeviennent réservées à Pro.</p>
+        </details>
+        <details class="reveal">
+          <summary>Comment résilier mon abonnement ?</summary>
+          <p>Depuis l’App Store : cliquez sur votre nom, puis « Réglages du compte » et « Abonnements ». La résiliation prend effet à la fin de la période en cours.</p>
+        </details>
+        <details class="reveal">
+          <summary>Pourquoi Optiwise demande l’accès à certains dossiers ?</summary>
+          <p>Pour mesurer la taille de vos Documents, Bureau et Téléchargements, macOS demande votre autorisation. Si vous refusez, l’analyse continue et la catégorie est simplement indiquée « Accès refusé ». L’accès complet au disque est facultatif.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appel final -->
+  <section>
+    <div class="wrap">
+      <div class="cta-final reveal">
+        <img src="assets/icone.png" alt="" width="84" height="84">
+        <h2>Redonnez de l’air à votre Mac.</h2>
+        <p class="lead">Lancez une analyse gratuite et découvrez combien d’espace vous attend.</p>
+        <a class="btn btn-primary" href="#tarifs">Bientôt sur le Mac App Store</a>
+      </div>
+    </div>
+  </section>
+
 </main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 KM Capital Group · Optiwise</div>
+    <nav aria-label="Liens légaux">
+      <a href="confidentialite/">Confidentialité</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Conditions d’utilisation</a>
+      <a href="support/">Support</a>
+      <a href="en/">English</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Apparition progressive des sections.
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' }) : null;
+  document.querySelectorAll('.reveal').forEach((el) => io ? io.observe(el) : el.classList.add('is-visible'));
+
+  // La capture principale se redresse au défilement.
+  const shot = document.getElementById('hero-shot');
+  const flatten = () => shot.classList.toggle('is-flat', window.scrollY > 60);
+  window.addEventListener('scroll', flatten, { passive: true });
+  flatten();
+
+  // Galerie à onglets.
+  const tabs = document.querySelectorAll('.gallery-tabs button');
+  const img = document.getElementById('gallery-img');
+  const caption = document.getElementById('gallery-caption');
+  tabs.forEach((tab) => tab.addEventListener('click', () => {
+    tabs.forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
+    img.style.opacity = 0;
+    const next = new Image();
+    next.onload = () => { img.src = tab.dataset.src; img.alt = tab.dataset.caption; img.style.opacity = 1; };
+    next.src = tab.dataset.src;
+    caption.textContent = tab.dataset.caption;
+  }));
+</script>
 </body>
 </html>
