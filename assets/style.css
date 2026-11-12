@@ -472,3 +472,10 @@ footer a { color: var(--text-2); }
 .ld-buy { width: 100%; padding: 12px; font-size: 14px; background: linear-gradient(90deg, var(--violet), var(--glacier)); color: #0C0820; box-shadow: 0 10px 30px -8px rgba(168,139,255,.8); }
 .ld-res .ld-list .ld-li.gone { padding-top: 0; padding-bottom: 0; border-top-width: 0; }
 .ld-pi.gone { border-top-width: 0; }
+/* Sélecteur de langue, visible aussi sur mobile */
+.lang { display: inline-flex; align-items: center; gap: 6px; margin-left: 4px; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--stroke-strong); color: var(--text); font-size: 13px; font-weight: 600; letter-spacing: .04em; white-space: nowrap; }
+.lang:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
+.lang svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.nav-links + .lang { margin-left: 0; }
+@media (max-width: 760px) { .lang { margin-left: auto; } .lang + .btn { margin-left: 0; } }
+@media (max-width: 440px) { .nav .wrap { gap: 10px; } .lang { padding: 6px 9px; font-size: 12px; } .nav .btn-sm { padding: 8px 12px; font-size: 13px; } .brand { font-size: 15px; } }
