@@ -65,6 +65,15 @@
         [T('Modèles LM Studio', 'LM Studio models'), 6.1, REVIEW, T('Jamais coché à votre place', 'Never checked for you')],
         [T('Cache de paquets Anaconda', 'Anaconda package cache'), 2.3, LOW, T('Retéléchargé au besoin', 'Downloaded again when needed')],
       ] },
+    { key: 'gaming', name: T('Jeux', 'Gaming'), plan: 'pro', color: '#FF8A3D', glyph: '◈',
+      tagline: T('Steam, Epic, Minecraft : caches de shaders et pages web des lanceurs, jamais vos jeux ni vos sauvegardes.', 'Steam, Epic, Minecraft: shader caches and launcher web data, never your games or saves.'),
+      items: [
+        [T('Cache de shaders Steam', 'Steam shader cache'), 4.6, LOW, T('Recompilé au lancement du jeu', 'Recompiled when the game starts')],
+        [T('Cache web de Steam', 'Steam web cache'), 1.2, LOW, T('Retéléchargé par le lanceur', 'Downloaded again by the launcher')],
+        [T('Cache web d’Epic Games', 'Epic Games web cache'), 0.9, LOW, T('Recréé automatiquement', 'Recreated automatically')],
+        [T('Journaux de plantage Minecraft', 'Minecraft crash reports'), 0.3, LOW, T('Utiles seulement pour le support', 'Only useful for support')],
+        [T('Jeux installés et sauvegardes', 'Installed games and saves'), 0, KEEP, T('Vos fichiers : jamais proposés', 'Your files: never suggested')],
+      ] },
     { key: 'student', name: T('Étudiant', 'Student'), plan: 'free', color: '#9BE15D', glyph: '✎',
       tagline: T('Images disque oubliées, simulateurs des Playgrounds, enregistrements de cours : on fait le tri avec vous.', 'Forgotten disk images, Playgrounds simulators, recorded classes: sorted out with you.'),
       items: [
